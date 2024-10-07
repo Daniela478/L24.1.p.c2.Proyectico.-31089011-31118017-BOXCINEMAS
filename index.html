@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXCINEMAS</title>
+</head>
+<div id="salida"></div>
+  <body>
+
+    <section id="mainform">
+<h3>CINE BOXCINEMAS</h3>
+<table id="mainform_tabla">
+  <tr>
+    <th>Familia</th>
+    <th>Personas</th>
+    <th>Día</th>
+    <th>Monto a pagar</th>
+  </tr>
+</table>
+
+<h5>Familia que pagó más: <span id="mainform_lblFamilia">?</span></h5>
+<h5>Promedio pagado los días lunes: $<span id="main_lblPromedio" >?</span></h5>
+<h5>Total de dinero al final de la jornada: $<span id="mainform_lblTotal">?</h5>
+<button id="mainform_btAgregar">Agregar familia</button>
+    </section>
+
+    <section id="familyform">
+<input type="text" id="familyform_familia" placeholder="Nombre de la familia"></input>
+<input type="text" id="familyform_personas" placeholder="Cantidad de personas"></input>
+<input type="text" id="familyform_dia" placeholder="Día de la visita"></input> 
+<button id="familyform_btAceptar">Aceptar</button>
+    </section>
+
+  </body>
+    <script type="module">
+      import { Cl_controlador } from "./js/Cl.Controlador.js";
+      new Cl_main();
+    </script>
+</html>
