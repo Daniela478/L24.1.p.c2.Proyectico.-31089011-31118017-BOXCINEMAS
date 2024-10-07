@@ -1,4 +1,4 @@
-export class Cl_vCine { 
+export default class Cl_vCine { 
     constructor (controlador){
     this.vista = document.getElementById("mainform");
     this.tabla = document.getElementById("mainform_table");

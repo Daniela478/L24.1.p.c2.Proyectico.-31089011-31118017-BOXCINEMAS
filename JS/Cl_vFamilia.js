@@ -1,4 +1,4 @@
-export class Cl_vFamilia { //prefijo "in" es por input
+export default class Cl_vFamilia { //prefijo "in" es por input
     
     constructor(controlador){
       this.vista = document.getElementById("familyform");

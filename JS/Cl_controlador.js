@@ -1,8 +1,9 @@
 
-import { Cl_mCine } from "./Cl_mCine.js";
-import { Cl_mFamilia } from "./Cl_mFamilia.js";
-import { Cl_vCine } from "./Cl_vCine.js";
-import { Cl_vFamilia } from "./Cl_vFamilia.js";
+import Cl_mCine from "./Cl_mCine.js";
+import Cl_mFamilia from "./Cl_mFamilia.js";
+
+import Cl_vCine from "./Cl_vCine.js";
+import  Cl_vFamilia from "./Cl_vFamilia.js";
 
 export default class Cl_controlador {
 
