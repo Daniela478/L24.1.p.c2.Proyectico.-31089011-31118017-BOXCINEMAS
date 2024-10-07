@@ -13,15 +13,15 @@ export class Cl_vFamilia { //prefijo "in" es por input
           personas: this.inpersonas.value,
           dia: this.india.value,
       });
-          this.ocultar();
+          this.ocultarVFamilia();
   
       }
        
-  mostrar(){
+  mostrarVFamilia(){
       this.vista.hidden = false;
       }
   
-  ocultar(){
+  ocultarVFamilia(){
       this.vista.hidden = true;
       }
   }

@@ -1,23 +1,25 @@
-import Cl_mCine from "./Cl_mCine,js";
-import  Cl_mFamilia from "./Cl_mFamilia,js";
-import  Cl_vCine from "./Cl_vCine,js";
-import  Cl_vFamilia from "./Cl_vFamilia,js";
-export default class Cl_controlador{
+
+import { Cl_mCine } from "./Cl_mCine.js";
+import { Cl_mFamilia } from "./Cl_mFamilia.js";
+import { Cl_vCine } from "./Cl_vCine.js";
+import { Cl_vFamilia } from "./Cl_vFamilia.js";
+
+export default class Cl_controlador {
 
     constructor (){
-        this.mCine = new this.Cl_mCine();
-        this.vCine = new this.Cl_mCine(this);      // Se envía acceso al controlador 
-        this.vFamilia = new this.Cl_vFamilia(this); // (this) para que cada vista pueda invocar sus métodos
+        this.mCine = new Cl_mCine();
+        this.vCine = new Cl_mCine(this);      // Se envía acceso al controlador 
+        this.vFamilia = new Cl_vFamilia(this); // (this) para que cada vista pueda invocar sus métodos
     }
 
 mostrarVistaFamilia() {//oculta la vista cine y muestra la vista familia
-this.vCine.ocultar();
-this.vFamilia.mostrar();
+this.vCine.ocultarVCine();
+this.vFamilia.mostrarVFamilia();
     }
     
 mostrarVistaCine(){//oculta la vista familia y muestra la vista cine 
-    this.vFamilia.Ocultar();
-    this.vCine.mostrar();
+    this.vFamilia.ocultarVFamilia();
+    this.vCine.mostrarVCine();
     }
 
     agregarFamilia ({ familia, personas, dia }) {

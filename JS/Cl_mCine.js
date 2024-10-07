@@ -1,6 +1,5 @@
-import {Cl_mFamilia} from "./Cl_mFamilia.js";
 export default class Cl_mCine { 
-    constructor(acumlunes, contlunes, mayor, auxfamilia, acumtotal, dinero){ 
+    constructor(acumLunes, contLunes, auxMayor, auxFamilia, acumTotal, dineroInicial){ 
         this.acumLunes = 0;
         this.contLunes = 0;
         this.auxMayor = 0;
@@ -12,8 +11,8 @@ export default class Cl_mCine {
         
         // familia que más pagó
         if (f.montoPagar() > this.auxMayor) { 
-            this.mayor = f.montoPagar();
-            this.auxfamilia = f.familia;
+            this.auxMayor = f.montoPagar();
+            this.auxFamilia = f.familia;
         }
 
         // acumulador de ventas lunes 

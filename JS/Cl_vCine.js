@@ -25,7 +25,7 @@ export class Cl_vCine {
       <td>${Personas}</td>
       <td>${Día}</td>
       <td>${Monto}</td>
-      </tr>`;
+      </tr>`; 
     
       this.lblFamilia.innerHTML = auxFamilia;
       this.lblPromdeio.innerHTML = promLunes;
