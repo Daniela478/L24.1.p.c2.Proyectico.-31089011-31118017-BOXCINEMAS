@@ -6,12 +6,19 @@ export default class Cl_vCine {
     this.lblPromedio = document.getElementById("main_lblPromedio");
     this.lblTotal = document.getElementById("mainform_lblTotal");
     this.btAgregar = document.getElementById("mainform_btAgregar");
-    this.btAgregar.onclick = () => controlador.mostrarVFamilia();
+    this.btAgregar.onclick = () => controlador.mostrarVistaFamilia();
     }
+    mostrarVCine(){
+      this.vista.hidden = false;
+      }
+  
+    ocultarVCine(){
+      this.vista.hidden = true;
+      }
     //verificar reportarCine
-    reportarCine({
-      acumlunes, 
-      contlunes, 
+    reportarCine ({
+      acumLunes, 
+      contLunes, 
       auxMayor, 
       devolverAuxNombre, 
       acumtotal, 
@@ -28,15 +35,9 @@ export default class Cl_vCine {
       </tr>`; 
     
       this.lblFamilia.innerHTML = auxFamilia;
-      this.lblPromdeio.innerHTML = promLunes;
-      this.lbltotal.innerHTML =totalCaja;
+      this.lblPromedio.innerHTML = promLunes;
+      this.lblTotal.innerHTML = totalCaja;
     }
-      mostrarVCine(){
-        this.vista.hidden = false;
-        }
-    
-      ocultarVCine(){
-        this.vista.hidden = true;
-        }
+     
     
     } 

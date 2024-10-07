@@ -9,7 +9,7 @@ export default class Cl_controlador {
 
     constructor (){
         this.mCine = new Cl_mCine();
-        this.vCine = new Cl_mCine(this);      // Se envía acceso al controlador 
+        this.vCine = new Cl_vCine(this);      // Se envía acceso al controlador 
         this.vFamilia = new Cl_vFamilia(this); // (this) para que cada vista pueda invocar sus métodos
     }
 
