@@ -1,7 +1,7 @@
 export default class Cl_vCine { 
     constructor (controlador){
     this.vista = document.getElementById("mainform");
-    this.tabla = document.getElementById("mainform_table");
+    this.table = document.getElementById("mainform_table");
     this.lblFamilia = document.getElementById("mainform_lblFamilia");
     this.lblPromedio = document.getElementById("main_lblPromedio");
     this.lblTotal = document.getElementById("mainform_lblTotal");
@@ -16,22 +16,21 @@ export default class Cl_vCine {
       this.vista.hidden = true;
       }
     //verificar reportarCine
-    reportarCine ({
-      acumLunes, 
-      contLunes, 
-      auxMayor, 
-      devolverAuxNombre, 
-      acumtotal, 
-      dineroInicial,
+    reportarCine({
+      familia,
+      personas,
+      día,
+      monto,
+      auxFamilia,
+      promLunes,
       totalCaja,
-      promLunes
     }) {
-      this.tabla.innerHTML += `
+      this.table.innerHTML += `
       <tr>
-      <td>${Familia}</td>
-      <td>${Personas}</td>
-      <td>${Día}</td>
-      <td>${Monto}</td>
+      <td>${familia}</td>
+      <td>${personas}</td>
+      <td>${día}</td>
+      <td>${monto}</td>
       </tr>`; 
     
       this.lblFamilia.innerHTML = auxFamilia;

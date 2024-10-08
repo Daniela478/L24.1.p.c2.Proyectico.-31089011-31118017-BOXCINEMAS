@@ -26,7 +26,7 @@ mostrarVistaCine(){//oculta la vista familia y muestra la vista cine
     agregarFamilia ({ familia, personas, dia }) {
         let family = new Cl_mFamilia  ({ familia, personas, dia });
         this.mCine.procesarFamilia (family);
-        this.vCine.reportarFamilia ({ 
+        this.vCine.reportarCine ({ 
             familia: family.familia, // creo que el famlia del medio debería ser family pero no estoy segura
             personas: family.personas,
             dia: family.dia,
