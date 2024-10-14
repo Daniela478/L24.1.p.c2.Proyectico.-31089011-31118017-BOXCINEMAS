@@ -1,12 +1,13 @@
 export default class Cl_mCine { 
-    constructor(acumLunes, contLunes, auxMayor, auxFamilia, acumTotal, dineroInicial){ 
+    constructor( { dineroInicial } ){ 
         this.acumLunes = 0;
         this.contLunes = 0;
         this.auxMayor = 0;
         this.auxfamilia = "";
         this.acumTotal = 0;
-        this.dineroInicial = 0;
-    }
+        this.dineroInicial = dineroInicial;
+    
+}
     procesarFamilia (f) { 
         
         // familia que más pagó

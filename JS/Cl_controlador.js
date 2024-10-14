@@ -9,8 +9,8 @@ export default class Cl_controlador {
 
     constructor (){
         this.mCine = new Cl_mCine();
-        this.vCine = new Cl_vCine(this);      // Se envía acceso al controlador 
         this.vFamilia = new Cl_vFamilia(this); // (this) para que cada vista pueda invocar sus métodos
+        this.vCine = new Cl_vCine(this);      // Se envía acceso al controlador 
     }
 
 mostrarVistaFamilia() {//oculta la vista cine y muestra la vista familia
@@ -23,19 +23,22 @@ mostrarVistaCine(){//oculta la vista familia y muestra la vista cine
     this.vCine.mostrarVCine();
     }
 
-    agregarFamilia ({ familia, personas, dia }) {
-        let family = new Cl_mFamilia  ({ familia, personas, dia });
-        this.mCine.procesarFamilia (family);
-        this.vCine.reportarCine ({ 
-            familia: family.familia, // creo que el famlia del medio debería ser family pero no estoy segura
-            personas: family.personas,
-            dia: family.dia,
-            montoPagar: family.montoPagar(),
-            promLunes: this.mCine.promLunes(),
-            totalCaja: this.mCine.totalCaja(),
-            devolverAuxNombre: this.mCine.devolverAuxNombre(),
-        });
-        this.mostrarVistaCine(); 
+agregarFamilia ({familia, personas, dia}) {
+let family = new Cl_mFamilia  ({ familia, personas, dia });
+this.mCine.procesarFamilia(family);
+    his.vCine.reportarCine ({ 
+        familia: family.familia, // creo que el famlia del medio debería ser family pero no estoy segura
+        personas: family.personas,
+        dia: family.dia,
+        montoPagar: family.montoPagar(),
+        promLunes: this.mCine.promLunes(),
+        totalCaja: this.mCine.totalCaja(),
+        devolverAuxNombre: this.mCine.devolverAuxNombre(),
+    });
+    this.mostrarVistaCine(); 
     }
-//5
+    
+agregarCine( { dineroInicial } ) {
+    this.mCine.dineroInicial = dineroInicial
+};
 } 

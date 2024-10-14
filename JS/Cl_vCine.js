@@ -5,9 +5,18 @@ export default class Cl_vCine {
     this.lblFamilia = document.getElementById("mainform_lblFamilia");
     this.lblPromedio = document.getElementById("main_lblPromedio");
     this.lblTotal = document.getElementById("mainform_lblTotal");
+    this.inDineroInicial = document.getElementById("mainform_inDineroInicial")
     this.btAgregar = document.getElementById("mainform_btAgregar");
-    this.btAgregar.onclick = () => controlador.mostrarVistaFamilia();
-    }
+    this.btAceptar = document.getElementById("mainform_btAceptar");
+    
+      this.btAceptar.onclick = () =>
+        controlador.agregarCine({
+        dineroInicial: this.inDineroInicial.value,
+        });    
+
+      this.btAgregar.onclick = () => 
+        controlador.mostrarVistaFamilia();
+      } 
     mostrarVCine(){
       this.vista.hidden = false;
       }
@@ -15,13 +24,13 @@ export default class Cl_vCine {
     ocultarVCine(){
       this.vista.hidden = true;
       }
-    //verificar reportarCine
+    
     reportarCine({
       familia,
       personas,
-      día,
-      monto,
-      auxFamilia,
+      dia,
+      montoPagar,
+      devolverAuxNombre,
       promLunes,
       totalCaja,
     }) {
@@ -29,14 +38,12 @@ export default class Cl_vCine {
       <tr>
       <td>${familia}</td>
       <td>${personas}</td>
-      <td>${día}</td>
-      <td>${monto}</td>
+      <td>${dia}</td>
+      <td>${montoPagar}</td>
       </tr>`; 
     
-      this.lblFamilia.innerHTML = auxFamilia;
+      this.lblFamilia.innerHTML = devolverAuxNombre;
       this.lblPromedio.innerHTML = promLunes;
       this.lblTotal.innerHTML = totalCaja;
-    }
-     
-    
+    }    
     } 
