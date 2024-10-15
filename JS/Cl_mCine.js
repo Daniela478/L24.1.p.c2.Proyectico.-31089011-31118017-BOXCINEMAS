@@ -3,7 +3,7 @@ export default class Cl_mCine {
         this.acumLunes = 0;
         this.contLunes = 0;
         this.auxMayor = 0;
-        this.auxfamilia = "";
+        this.auxFamilia = "";
         this.acumTotal = 0;
         this.dineroInicial = dineroInicial;
     
@@ -19,7 +19,7 @@ export default class Cl_mCine {
         // acumulador de ventas lunes 
 
         if (f.dia == 1) {
-        this.acumLunes =+ f.montoPagar();
+        this.acumLunes += f.montoPagar();
         this.contLunes++;
         }
 
@@ -33,9 +33,9 @@ export default class Cl_mCine {
         return 0;
      }
      totalCaja() { 
-        return (this.acumTotal + this.dineroInicial);
+        return this.acumTotal - ( -this.dineroInicial);
      }
      devolverAuxNombre() { 
-        return this.auxMayor;
+        return this.auxFamilia;
      } 
 }
