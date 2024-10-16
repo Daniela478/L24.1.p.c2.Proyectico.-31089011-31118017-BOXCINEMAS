@@ -8,6 +8,13 @@ export default class Cl_mCine {
         this.dineroInicial = dineroInicial;
     
 }
+set dineroInicial (d) { 
+    this._dineroInicial = +d;
+}
+get dineroInicial () { 
+    return this._dineroInicial;
+}
+
     procesarFamilia (f) { 
         
         // familia que más pagó
@@ -33,7 +40,7 @@ export default class Cl_mCine {
         return 0;
      }
      totalCaja() { 
-        return this.acumTotal - ( -this.dineroInicial);
+        return this.acumTotal + this.dineroInicial;
      }
      devolverAuxNombre() { 
         return this.auxFamilia;
