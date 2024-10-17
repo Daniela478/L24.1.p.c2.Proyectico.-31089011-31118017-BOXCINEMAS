@@ -9,8 +9,8 @@ export default class Cl_controlador {
 
     constructor (){
         this.mCine = new Cl_mCine(this);
-        this.vFamilia = new Cl_vFamilia(this); // (this) para que cada vista pueda invocar sus métodos
-        this.vCine = new Cl_vCine(this);      // Se envía acceso al controlador 
+        this.vFamilia = new Cl_vFamilia(this); 
+        this.vCine = new Cl_vCine(this);      
     }
 
 mostrarVistaFamilia() {//oculta la vista cine y muestra la vista familia
@@ -27,7 +27,7 @@ agregarFamilia ({familia, personas, dia}) {
 let family = new Cl_mFamilia  ({ familia, personas, dia });
 this.mCine.procesarFamilia(family);
     this.vCine.reportarCine ({ 
-        familia: family.familia, // creo que el famlia del medio debería ser family pero no estoy segura
+        familia: family.familia, 
         personas: family.personas,
         dia: family.dia,
         montoPagar: family.montoPagar(),
